@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UMTableViewCell.h"
+#import "SWTableViewCell.h"
 
-@interface ContentTableViewCell : UMTableViewCell
+@interface ContentTableViewCell : SWTableViewCell
 
 @end

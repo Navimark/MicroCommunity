@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		096A347C6E100DB6D31A9DD9 /* libPods-MicroCommunity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC63FF05B03C14F974842D4 /* libPods-MicroCommunity.a */; };
 		5D3298FB1A47C3C90043AF1D /* ContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */; };
+		5D3299121A47FE580043AF1D /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299111A47FE580043AF1D /* GCPlaceholderTextView.m */; };
+		5D3299161A4801090043AF1D /* UIViewController+TopBarMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299151A4801090043AF1D /* UIViewController+TopBarMessage.m */; };
 		5D7554311A456B1C00CF80DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554301A456B1C00CF80DB /* main.m */; };
 		5D7554341A456B1C00CF80DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554331A456B1C00CF80DB /* AppDelegate.m */; };
 		5D7554371A456B1C00CF80DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554361A456B1C00CF80DB /* ViewController.m */; };
@@ -32,6 +34,10 @@
 		3872FD6D36EE76FCD7310AB9 /* Pods-MicroCommunity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroCommunity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroCommunity/Pods-MicroCommunity.debug.xcconfig"; sourceTree = "<group>"; };
 		5D3298F91A47C3C90043AF1D /* ContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewCell.h; sourceTree = "<group>"; };
 		5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewCell.m; sourceTree = "<group>"; };
+		5D3299101A47FE580043AF1D /* GCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPlaceholderTextView.h; sourceTree = "<group>"; };
+		5D3299111A47FE580043AF1D /* GCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPlaceholderTextView.m; sourceTree = "<group>"; };
+		5D3299141A4801090043AF1D /* UIViewController+TopBarMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TopBarMessage.h"; sourceTree = "<group>"; };
+		5D3299151A4801090043AF1D /* UIViewController+TopBarMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TopBarMessage.m"; sourceTree = "<group>"; };
 		5D75542B1A456B1C00CF80DB /* MicroCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D75542F1A456B1C00CF80DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D7554301A456B1C00CF80DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +74,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D32990F1A47FE580043AF1D /* GCPlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				5D3299101A47FE580043AF1D /* GCPlaceholderTextView.h */,
+				5D3299111A47FE580043AF1D /* GCPlaceholderTextView.m */,
+			);
+			path = GCPlaceholderTextView;
+			sourceTree = "<group>";
+		};
+		5D3299131A4801090043AF1D /* TopBarMsg+UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D3299141A4801090043AF1D /* UIViewController+TopBarMessage.h */,
+				5D3299151A4801090043AF1D /* UIViewController+TopBarMessage.m */,
+			);
+			path = "TopBarMsg+UIViewController";
+			sourceTree = "<group>";
+		};
 		5D7554221A456B1C00CF80DB = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +115,8 @@
 		5D75542D1A456B1C00CF80DB /* MicroCommunity */ = {
 			isa = PBXGroup;
 			children = (
+				5D3299131A4801090043AF1D /* TopBarMsg+UIViewController */,
+				5D32990F1A47FE580043AF1D /* GCPlaceholderTextView */,
 				5D7554321A456B1C00CF80DB /* AppDelegate.h */,
 				5D7554331A456B1C00CF80DB /* AppDelegate.m */,
 				5D7554351A456B1C00CF80DB /* ViewController.h */,
@@ -285,7 +311,9 @@
 			files = (
 				5D7554371A456B1C00CF80DB /* ViewController.m in Sources */,
 				5D7554341A456B1C00CF80DB /* AppDelegate.m in Sources */,
+				5D3299121A47FE580043AF1D /* GCPlaceholderTextView.m in Sources */,
 				5D7554311A456B1C00CF80DB /* main.m in Sources */,
+				5D3299161A4801090043AF1D /* UIViewController+TopBarMessage.m in Sources */,
 				5D3298FB1A47C3C90043AF1D /* ContentTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
