@@ -1,15 +1,14 @@
 //
-//  ViewController.h
+//  ContentTableViewCell.h
 //  MicroCommunity
 //
-//  Created by IOS－001 on 14/12/20.
+//  Created by IOS－001 on 14/12/22.
 //  Copyright (c) 2014年 E-Techco Information Technologies Co., LTD. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "UMTableViewCell.h"
 
-@interface ViewController : UITableViewController
-
+@interface ContentTableViewCell : UMTableViewCell
 
 @end
-

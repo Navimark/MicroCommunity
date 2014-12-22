@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		096A347C6E100DB6D31A9DD9 /* libPods-MicroCommunity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC63FF05B03C14F974842D4 /* libPods-MicroCommunity.a */; };
+		5D3298FB1A47C3C90043AF1D /* ContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */; };
 		5D7554311A456B1C00CF80DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554301A456B1C00CF80DB /* main.m */; };
 		5D7554341A456B1C00CF80DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554331A456B1C00CF80DB /* AppDelegate.m */; };
 		5D7554371A456B1C00CF80DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554361A456B1C00CF80DB /* ViewController.m */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3872FD6D36EE76FCD7310AB9 /* Pods-MicroCommunity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroCommunity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroCommunity/Pods-MicroCommunity.debug.xcconfig"; sourceTree = "<group>"; };
+		5D3298F91A47C3C90043AF1D /* ContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewCell.h; sourceTree = "<group>"; };
+		5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewCell.m; sourceTree = "<group>"; };
 		5D75542B1A456B1C00CF80DB /* MicroCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D75542F1A456B1C00CF80DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D7554301A456B1C00CF80DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +45,8 @@
 		5D7554441A456B1C00CF80DB /* MicroCommunityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicroCommunityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7554491A456B1C00CF80DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D75544A1A456B1C00CF80DB /* MicroCommunityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MicroCommunityTests.m; sourceTree = "<group>"; };
+		CAC63FF05B03C14F974842D4 /* libPods-MicroCommunity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MicroCommunity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57543203E90655629ACE4DC /* Pods-MicroCommunity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroCommunity.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroCommunity/Pods-MicroCommunity.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096A347C6E100DB6D31A9DD9 /* libPods-MicroCommunity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,8 @@
 				5D75542D1A456B1C00CF80DB /* MicroCommunity */,
 				5D7554471A456B1C00CF80DB /* MicroCommunityTests */,
 				5D75542C1A456B1C00CF80DB /* Products */,
+				6337FE3FAEF89451FA8819E6 /* Pods */,
+				EC8E4A80B6D087A83D6F6654 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +95,8 @@
 				5D7554331A456B1C00CF80DB /* AppDelegate.m */,
 				5D7554351A456B1C00CF80DB /* ViewController.h */,
 				5D7554361A456B1C00CF80DB /* ViewController.m */,
+				5D3298F91A47C3C90043AF1D /* ContentTableViewCell.h */,
+				5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */,
 				5D7554381A456B1C00CF80DB /* Main.storyboard */,
 				5D75543B1A456B1C00CF80DB /* Images.xcassets */,
 				5D75543D1A456B1C00CF80DB /* LaunchScreen.xib */,
@@ -119,6 +131,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6337FE3FAEF89451FA8819E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3872FD6D36EE76FCD7310AB9 /* Pods-MicroCommunity.debug.xcconfig */,
+				D57543203E90655629ACE4DC /* Pods-MicroCommunity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC8E4A80B6D087A83D6F6654 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAC63FF05B03C14F974842D4 /* libPods-MicroCommunity.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D75544E1A456B1C00CF80DB /* Build configuration list for PBXNativeTarget "MicroCommunity" */;
 			buildPhases = (
+				7888EDA34AF53A120B1BF6A1 /* Check Pods Manifest.lock */,
 				5D7554271A456B1C00CF80DB /* Sources */,
 				5D7554281A456B1C00CF80DB /* Frameworks */,
 				5D7554291A456B1C00CF80DB /* Resources */,
+				B5BAB9B47BFC2E7D4C66AE4A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +245,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7888EDA34AF53A120B1BF6A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5BAB9B47BFC2E7D4C66AE4A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MicroCommunity/Pods-MicroCommunity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5D7554271A456B1C00CF80DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,6 +286,7 @@
 				5D7554371A456B1C00CF80DB /* ViewController.m in Sources */,
 				5D7554341A456B1C00CF80DB /* AppDelegate.m in Sources */,
 				5D7554311A456B1C00CF80DB /* main.m in Sources */,
+				5D3298FB1A47C3C90043AF1D /* ContentTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +406,7 @@
 		};
 		5D75544F1A456B1C00CF80DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3872FD6D36EE76FCD7310AB9 /* Pods-MicroCommunity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MicroCommunity/Info.plist;
@@ -351,6 +417,7 @@
 		};
 		5D7554501A456B1C00CF80DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D57543203E90655629ACE4DC /* Pods-MicroCommunity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MicroCommunity/Info.plist;
@@ -412,6 +479,7 @@
 				5D7554501A456B1C00CF80DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D7554511A456B1C00CF80DB /* Build configuration list for PBXNativeTarget "MicroCommunityTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +488,7 @@
 				5D7554531A456B1C00CF80DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
