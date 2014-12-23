@@ -116,4 +116,15 @@
     return nil;
 }
 
++ (NSString *)flatRandomColorRGBString
+{
+    UIColor *color = [UIColor brightRandomColor];
+
+    CGFloat r,g,b,a;
+    [color getRed:&r green:&g blue:&b alpha:&a];
+    
+//    return [NSString stringWithFormat:@"#%03d%03d%03d",(int)(r * 255 + 0.5),(int)(g * 255 + 0.5),(int)(b * 255 + 0.5)];
+    return [NSString stringWithFormat:@"#%0.3lf%0.3lf%0.3lf",r,g,b];
+}
+
 @end

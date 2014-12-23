@@ -72,7 +72,8 @@
 
 - (void)fetchAllEntitiesForAppFirstLoadingWithCompletionHandler:(void (^)(NSArray *))completionHandler
 {
-    NSArray *attributes = [[ACDBManager sharedInstance] queryTable:[self tableName] withSQLCondition:@""];
+    NSString *condition = [NSString stringWithFormat:@"order by copiedTimes asc,addedTimeStamp desc"];
+    NSArray *attributes = [[ACDBManager sharedInstance] queryTable:[self tableName] withSQLCondition:condition];
     NSMutableArray *tempArray = [@[] mutableCopy];
     for (NSDictionary *dict in attributes) {
         InfoEntityModel *entityModel = [[InfoEntityModel alloc] init];

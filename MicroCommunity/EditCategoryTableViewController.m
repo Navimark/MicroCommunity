@@ -7,6 +7,8 @@
 //
 
 #import "EditCategoryTableViewController.h"
+#import "NSString+Color.h"
+#import "UIColor+Addition.h"
 
 @interface EditCategoryTableViewController ()
 
@@ -98,6 +100,11 @@
     return 0;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:17.];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditCategoryTableViewCellKey" forIndexPath:indexPath];
     EntityCategoryModel *model = nil;
@@ -113,6 +120,7 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     cell.textLabel.text = model.categoryName;
+    cell.textLabel.textColor = [model.categoryBackHEXColor RGBStringToColor];
     cell.indentationLevel = 2;
     return cell;
 }
@@ -155,7 +163,7 @@
             NSLog(@"EntityCategoryModel在数据库中删除不成功");
         } else {
             [self reloadTableViewDataSourceAfterReloadTableView:NO];
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         }
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

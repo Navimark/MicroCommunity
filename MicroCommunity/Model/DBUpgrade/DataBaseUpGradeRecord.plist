@@ -6,19 +6,17 @@
 	<array>
 		<string>CREATE TABLE &quot;T_Category&quot; (categoryName varchar,categoryId varchar PRIMARY KEY, isEditable boolean);</string>
 	</array>
-	<key>010020</key>
-	<array>
-		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable ) VALUES ( &apos;饮食&apos;,&apos;167091.3772749101&apos;,&apos;0&apos; );</string>
-	</array>
 	<key>010030</key>
 	<array>
 		<string>CREATE TABLE &quot;T_Entity&quot; (contentId varchar PRIMARY KEY,contentText text,copiedTimes varchar,lastestCopyTimeStamp varchar,addedTimeStamp varchar,categoryId varchar);</string>
 	</array>
 	<key>010033</key>
 	<array>
-		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable ) VALUES ( &apos;减肥&apos;,&apos;167091.3772749201&apos;,&apos;0&apos; );</string>
-		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable ) VALUES ( &apos;增肥&apos;,&apos;167091.3772749301&apos;,&apos;0&apos; );</string>
-		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable ) VALUES ( &apos;默认类别&apos;,&apos;167091.3772749001&apos;,&apos;0&apos; );</string>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;默认类别&apos;,&apos;167091.3772749001&apos;,&apos;0&apos;,&apos;#0.6000.4000.200&apos; );</string>
+	</array>
+	<key>010001</key>
+	<array>
+		<string>ALTER TABLE T_Category ADD categoryBackHEXColor varchar;</string>
 	</array>
 </dict>
 </plist>

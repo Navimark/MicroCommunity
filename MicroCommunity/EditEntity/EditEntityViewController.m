@@ -10,6 +10,7 @@
 #import "GCPlaceholderTextView.h"
 #import "EditCategoryTableViewController.h"
 #import "UIViewController+TopBarMessage.h"
+#import "NSString+Color.h"
 
 @interface EditEntityViewController ()
 
@@ -46,11 +47,19 @@
     if (self.editingEntityModel.categoryModel.categoryName.length != 0) {
         //有类别了
         [self.categoryNameButton setTitle:self.editingEntityModel.categoryModel.categoryName forState:UIControlStateNormal];
-        [self.categoryNameButton setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
+        [self.categoryNameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.categoryNameButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+        self.categoryNameButton.backgroundColor = [self.editingEntityModel.categoryModel.categoryBackHEXColor RGBStringToColor];
     } else {
         //暂无类别选择
         [self.categoryNameButton setTitle:@"请选择类别" forState:UIControlStateNormal];
         [self.categoryNameButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        self.categoryNameButton.backgroundColor = [UIColor whiteColor];
+        self.categoryNameButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+    }
+    
+    if (self.editingEntityModel.contentText.length != 0 && self.contentTextView.text.length == 0) {
+        self.contentTextView.text = self.editingEntityModel.contentText;
     }
 }
 
@@ -66,13 +75,31 @@
     }
 }
 
+- (NSString *)fetchRightNowTimeStringWithFormatyyyyMMddHHmmss
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    return [dateFormatter stringFromDate:[NSDate date]];
+}
+
 - (IBAction)saveInfoEntityAction:(id)sender
 {
     if (self.editingEntityModel.categoryModel.categoryId.length == 0) {
         [self showTopMessage:@"请选择类别"];
         return;
     }
+
     self.editingEntityModel.contentText = [self.contentTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (self.editingEntityModel.lastestCopyTimeStamp.length == 0) {
+        self.editingEntityModel.lastestCopyTimeStamp = @"从未复制";
+        self.editingEntityModel.copiedTimes = @"0";
+    } else {
+        //说明被复制过，就不去改动那个复制时间
+        //当前是编辑模式
+    }
+    
+    self.editingEntityModel.addedTimeStamp = [self fetchRightNowTimeStringWithFormatyyyyMMddHHmmss];
+    
     if ([self.editingEntityModel insertIntoDatabase]) {
         NSLog(@"保存成功");
         [self showTopMessage:@"保存成功"];

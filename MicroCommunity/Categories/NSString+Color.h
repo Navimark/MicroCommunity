@@ -12,4 +12,6 @@
 
 - (UIColor *)toColor;
 
+- (UIColor *)RGBStringToColor;
+
 @end

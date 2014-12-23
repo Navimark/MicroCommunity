@@ -14,4 +14,6 @@
 
 @property (nonatomic , strong) InfoEntityModel *infoModel;
 
+@property (nonatomic , copy) void(^copyButtonAction)(void);
+
 @end

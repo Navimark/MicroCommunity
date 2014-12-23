@@ -22,6 +22,9 @@
 + (UIColor *)colorWithRGBHex:(UInt32)hex;
 
 - (UIColor *)darkerColor;
+
 - (UIColor *)lighterColor;
+
++ (NSString *)flatRandomColorRGBString;
 
 @end

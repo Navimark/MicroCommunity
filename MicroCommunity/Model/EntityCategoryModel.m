@@ -8,6 +8,7 @@
 
 #import "EntityCategoryModel.h"
 #import "ACDBManager.h"
+#import "UIColor+Addition.h"
 
 @interface EntityCategoryModel ()
 
@@ -66,6 +67,7 @@
     [dict setValue:self.categoryId forKey:@"categoryId"];
     [dict setValue:self.categoryName forKey:@"categoryName"];
     [dict setValue:@(self.isEditable) forKey:@"isEditable"];
+    [dict setValue:self.categoryBackHEXColor forKey:@"categoryBackHEXColor"];
     return dict;
 }
 
@@ -91,6 +93,8 @@
         NSDate *referenceDate = [self.innerTimeFormatter dateFromString:@"2014-12-21 12:12:12"];
         NSTimeInterval tempTime = [[NSDate date] timeIntervalSinceDate:referenceDate];
         self.categoryId = [@(tempTime) stringValue];
+        
+        self.categoryBackHEXColor = [UIColor flatRandomColorRGBString];
     }
     return self;
 }
@@ -107,6 +111,7 @@
     if (tempDict.count != 0) {
         EntityCategoryModel *tempModel = [[EntityCategoryModel alloc] init];
         tempModel.categoryId = tempDict[@"categoryId"];
+        tempModel.categoryBackHEXColor = tempDict[@"categoryBackHEXColor"];
         tempModel.categoryName = categoryName;
         return tempModel;
     } else {
@@ -127,6 +132,7 @@
     if (tempDict.count != 0) {
         EntityCategoryModel *tempModel = [[EntityCategoryModel alloc] init];
         tempModel.categoryName = tempDict[@"categoryName"];
+        tempModel.categoryBackHEXColor = tempDict[@"categoryBackHEXColor"];
         tempModel.categoryId = categoryId;
         return tempModel;
     } else {

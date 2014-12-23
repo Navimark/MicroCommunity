@@ -13,8 +13,7 @@
 @property (nonatomic , copy) NSString *categoryName;
 @property (nonatomic , copy) NSString *categoryId;
 @property (nonatomic , assign) BOOL isEditable;
-
-@property (nonatomic , assign) BOOL isCurrentSelected;//在界面上，表明是不是被√选中
+@property (nonatomic , copy) NSString *categoryBackHEXColor;//16进制的颜色字符串
 
 @property (nonatomic , strong) NSArray *allCategoryModels;
 @property (nonatomic , strong) NSArray *allEditableCategoryModels;
