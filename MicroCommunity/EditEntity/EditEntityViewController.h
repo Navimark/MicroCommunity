@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "InfoEntityModel.h"
+#import "EntityCategoryModel.h"
 
 @interface EditEntityViewController : UIViewController
 

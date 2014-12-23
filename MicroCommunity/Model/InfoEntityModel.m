@@ -56,10 +56,15 @@
     return dict;
 }
 
+- (NSString *)description
+{
+    return [[self convertToDictionary] description];
+}
+
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    EntityCategoryModel *categoryModel = [[EntityCategoryModel alloc] init];
-    self.categoryModel = [categoryModel fetchOneCategoryWithCategoryId:key];
+    EntityCategoryModel *categoryModel = [EntityCategoryModel fetchOneCategoryWithCategoryId:value];
+    self.categoryModel = categoryModel;
 }
 
 #pragma mark - 
@@ -74,7 +79,7 @@
         [entityModel setValuesForKeysWithDictionary:dict];
         [tempArray addObject:entityModel];
     }
-    completionHandler(tempArray);
+    completionHandler(self.allInfoEntityModels = tempArray);
 }
 
 #pragma mark -
@@ -82,6 +87,10 @@
 
 - (BOOL)insertIntoDatabase
 {
+    if ([self deleteInDatabase]) {
+        NSLog(@"之前已经存在，现在删除了 - 编辑");
+    }
+    
     return [[ACDBManager sharedInstance] insertIntoTable:[self tableName] withAttribute:[self convertToDictionary]];
 }
 

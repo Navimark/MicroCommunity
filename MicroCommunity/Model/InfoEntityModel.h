@@ -18,6 +18,8 @@
 @property (nonatomic , strong) EntityCategoryModel *categoryModel;//所属类别
 @property (nonatomic , copy) NSString *addedTimeStamp;//加入的时间
 
+@property (nonatomic , strong) NSArray *allInfoEntityModels;
+
 /**
  *  app启动时，查询所有的记录，显示在首页
  *

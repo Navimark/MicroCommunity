@@ -17,10 +17,14 @@
 @property (nonatomic , assign) BOOL isCurrentSelected;//在界面上，表明是不是被√选中
 
 @property (nonatomic , strong) NSArray *allCategoryModels;
+@property (nonatomic , strong) NSArray *allEditableCategoryModels;
+@property (nonatomic , strong) NSArray *allUnEditableCategoryModels;
 
 - (void)fetchAllCategoriesWithCompletionHandler:(void(^)(NSArray *allCategories))completionHandler;
 
-- (EntityCategoryModel *)fetchOneCategoryWithCategoryId:(NSString *)categoryId;
++ (EntityCategoryModel *)fetchOneCategoryWithCategoryId:(NSString *)categoryId;
+
++ (EntityCategoryModel *)fetchOneCategoryWithCategoryName:(NSString *)categoryName;
 
 /**
  *  在数据库里面删除

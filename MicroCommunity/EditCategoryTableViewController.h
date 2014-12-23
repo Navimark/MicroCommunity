@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EntityCategoryModel.h"
+#import "EditEntityViewController.h"
 
 @interface EditCategoryTableViewController : UITableViewController
+
+@property (nonatomic , strong) EntityCategoryModel *currentCategroyModel;
+@property (nonatomic , weak) EditEntityViewController *parentVC;
 
 @end

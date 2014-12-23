@@ -14,10 +14,19 @@
 @interface ViewController () <SWTableViewCellDelegate>
 
 @property (nonatomic , strong) NSArray *rightButtons;
+@property (nonatomic , strong) InfoEntityModel *listControlModel;
 
 @end
 
 @implementation ViewController
+
+- (InfoEntityModel *)listControlModel
+{
+    if (!_listControlModel) {
+        _listControlModel = [[InfoEntityModel alloc] init];
+    }
+    return _listControlModel;
+}
 
 - (NSArray *)rightButtons
 {
@@ -38,9 +47,19 @@
     self.title = @"微社区";
     // Do any additional setup after loading the view, typically from a nib.
     self.tableView.estimatedRowHeight = 136;
-    self.tableView.rowHeight = 136;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    self.tableView.rowHeight = 136;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.listControlModel fetchAllEntitiesForAppFirstLoadingWithCompletionHandler:^(NSArray *allEntities) {
+        dispatch_async(dispatch_get_main_queue(), ^(){
+            [self.tableView reloadData];
+        });
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +74,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.listControlModel.allInfoEntityModels.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -63,6 +82,8 @@
     ContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContentTableViewCellReuseKey" forIndexPath:indexPath];
     [cell setRightUtilityButtons:[self rightButtons] WithButtonWidth:70.0];
     cell.delegate = self;
+    InfoEntityModel *tempModel = self.listControlModel.allInfoEntityModels[indexPath.row];
+    cell.infoModel = tempModel;
     return cell;
 }
 

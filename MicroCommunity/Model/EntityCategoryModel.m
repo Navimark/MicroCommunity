@@ -17,7 +17,45 @@
 
 @implementation EntityCategoryModel
 
+- (BOOL)isEqual:(id)object
+{
+    if (object && [object isKindOfClass:[EntityCategoryModel class]]) {
+        EntityCategoryModel *anotherObj = (EntityCategoryModel *)object;
+        if ([anotherObj.categoryId isEqualToString:self.categoryId]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 - (NSString *)tableName
+{
+    return @"T_Category";
+}
+
+- (NSArray *)allUnEditableCategoryModels
+{
+    NSMutableArray *tempArray = [@[] mutableCopy];
+    for (EntityCategoryModel *tempModel in self.allCategoryModels) {
+        if (tempModel.isEditable == NO) {
+            [tempArray addObject:tempModel];
+        }
+    }
+    return tempArray;
+}
+
+- (NSArray *)allEditableCategoryModels
+{
+    NSMutableArray *tempArray = [@[] mutableCopy];
+    for (EntityCategoryModel *tempModel in self.allCategoryModels) {
+        if (tempModel.isEditable) {
+            [tempArray addObject:tempModel];
+        }
+    }
+    return tempArray;
+}
+
++ (NSString *)tableName
 {
     return @"T_Category";
 }
@@ -27,8 +65,13 @@
     NSMutableDictionary *dict = [@{} mutableCopy];
     [dict setValue:self.categoryId forKey:@"categoryId"];
     [dict setValue:self.categoryName forKey:@"categoryName"];
-    [dict setValue:@(self.isEditable) forKey:@"self.isEditable"];
+    [dict setValue:@(self.isEditable) forKey:@"isEditable"];
     return dict;
+}
+
+- (NSString *)description
+{
+    return [[self convertToDictionary] description];
 }
 
 - (NSDateFormatter *)innerTimeFormatter
@@ -52,8 +95,31 @@
     return self;
 }
 
-- (EntityCategoryModel *)fetchOneCategoryWithCategoryId:(NSString *)categoryId
++ (EntityCategoryModel *)fetchOneCategoryWithCategoryName:(NSString *)categoryName
 {
+    if (categoryName.length == 0) {
+        return nil;
+    }
+    NSString *condition = [NSString stringWithFormat:@"where categoryName='%@'",categoryName];
+    NSArray *attributes = [[ACDBManager sharedInstance] queryTable:[self tableName] withSQLCondition:condition];
+    NSDictionary *tempDict = [attributes firstObject];
+    
+    if (tempDict.count != 0) {
+        EntityCategoryModel *tempModel = [[EntityCategoryModel alloc] init];
+        tempModel.categoryId = tempDict[@"categoryId"];
+        tempModel.categoryName = categoryName;
+        return tempModel;
+    } else {
+        return nil;
+    }
+}
+
++ (EntityCategoryModel *)fetchOneCategoryWithCategoryId:(NSString *)categoryId
+{
+    if (categoryId.length == 0) {
+        return nil;
+    }
+    
     NSString *condition = [NSString stringWithFormat:@"where categoryId='%@'",categoryId];
     NSArray *attributes = [[ACDBManager sharedInstance] queryTable:[self tableName] withSQLCondition:condition];
     NSDictionary *tempDict = [attributes firstObject];
@@ -70,7 +136,8 @@
 
 - (void)fetchAllCategoriesWithCompletionHandler:(void (^)(NSArray *))completionHandler
 {
-    NSArray *attributes = [[ACDBManager sharedInstance] queryTable:[self tableName] withSQLCondition:@""];
+    NSString *condition = [NSString stringWithFormat:@"order by categoryId asc"];
+    NSArray *attributes = [[ACDBManager sharedInstance] queryTable:[self tableName] withSQLCondition:condition];
     NSMutableArray *tempArray = [@[] mutableCopy];
     for (NSDictionary *tempDict in attributes) {
         EntityCategoryModel *categoryModel = [[EntityCategoryModel alloc] init];

@@ -29,6 +29,7 @@
 		5D75543C1A456B1C00CF80DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D75543B1A456B1C00CF80DB /* Images.xcassets */; };
 		5D75543F1A456B1C00CF80DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D75543D1A456B1C00CF80DB /* LaunchScreen.xib */; };
 		5D75544B1A456B1C00CF80DB /* MicroCommunityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D75544A1A456B1C00CF80DB /* MicroCommunityTests.m */; };
+		5D9C71131A4906AB00A7A939 /* AddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9C71121A4906AB00A7A939 /* AddCategoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		5D7554441A456B1C00CF80DB /* MicroCommunityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicroCommunityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7554491A456B1C00CF80DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D75544A1A456B1C00CF80DB /* MicroCommunityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MicroCommunityTests.m; sourceTree = "<group>"; };
+		5D9C71111A4906AB00A7A939 /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
+		5D9C71121A4906AB00A7A939 /* AddCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCategoryViewController.m; sourceTree = "<group>"; };
 		CAC63FF05B03C14F974842D4 /* libPods-MicroCommunity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MicroCommunity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57543203E90655629ACE4DC /* Pods-MicroCommunity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroCommunity.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroCommunity/Pods-MicroCommunity.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +159,8 @@
 			children = (
 				5D3299311A480EA90043AF1D /* EditCategoryTableViewController.h */,
 				5D3299321A480EA90043AF1D /* EditCategoryTableViewController.m */,
+				5D9C71111A4906AB00A7A939 /* AddCategoryViewController.h */,
+				5D9C71121A4906AB00A7A939 /* AddCategoryViewController.m */,
 			);
 			name = EditCategory;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				5D3299281A4802200043AF1D /* NSString+Color.m in Sources */,
 				5D3299331A480EA90043AF1D /* EditCategoryTableViewController.m in Sources */,
 				5D32992B1A48022D0043AF1D /* UIColor+Addition.m in Sources */,
+				5D9C71131A4906AB00A7A939 /* AddCategoryViewController.m in Sources */,
 				5D32991D1A4801B70043AF1D /* ACDBManager.m in Sources */,
 				5D3298FB1A47C3C90043AF1D /* ContentTableViewCell.m in Sources */,
 				5D3299401A4818160043AF1D /* ACDataBaseUpGrade.m in Sources */,

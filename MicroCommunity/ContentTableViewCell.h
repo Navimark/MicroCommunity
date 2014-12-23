@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SWTableViewCell.h"
+#import "InfoEntityModel.h"
 
 @interface ContentTableViewCell : SWTableViewCell
+
+@property (nonatomic , strong) InfoEntityModel *infoModel;
 
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>46B85852-3EE6-4058-8A6E-6FC78953326B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MicroCommunity</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B03E065FE8FB3B522022FCB0E3B1DFF1309A8244</key>
+		<string>https://github.com/iOSNerd/MicroCommunity.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MicroCommunity.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B03E065FE8FB3B522022FCB0E3B1DFF1309A8244</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iOSNerd/MicroCommunity.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B03E065FE8FB3B522022FCB0E3B1DFF1309A8244</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B03E065FE8FB3B522022FCB0E3B1DFF1309A8244</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MicroCommunity</string>
+		</dict>
+	</array>
+</dict>
+</plist>
