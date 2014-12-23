@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "ContentTableViewCell.h"
+#import "EditEntityViewController.h"
+#import "InfoEntityModel.h"
 
 @interface ViewController () <SWTableViewCellDelegate>
 
@@ -22,10 +24,10 @@
     NSMutableArray *rightUtilityButtons = [NSMutableArray new];
     [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
-                                                title:@"More"];
+                                                title:@"编辑"];
     [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-                                                title:@"Delete"];
+                                                title:@"删除"];
     
     return rightUtilityButtons;
 }
@@ -67,6 +69,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AddEntity"]) {
+        NSLog(@"传参");
+//        EditEntityViewController *editEntityVC = segue.destinationViewController;
+    }
 }
 
 #pragma mark -

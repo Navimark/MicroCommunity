@@ -1,0 +1,20 @@
+PODS:
+  - FMDB (2.4):
+    - FMDB/standard (= 2.4)
+  - FMDB/common (2.4)
+  - FMDB/standard (2.4):
+    - FMDB/common
+  - MBProgressHUD (0.9)
+  - SWTableViewCell (0.3.7)
+
+DEPENDENCIES:
+  - FMDB (~> 2.4)
+  - MBProgressHUD (~> 0.9)
+  - SWTableViewCell (~> 0.3.7)
+
+SPEC CHECKSUMS:
+  FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  SWTableViewCell: 25de71898e3fcd11cf75707ef90245acf990ec03
+
+COCOAPODS: 0.35.0

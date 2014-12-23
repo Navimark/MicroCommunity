@@ -10,7 +10,18 @@
 		096A347C6E100DB6D31A9DD9 /* libPods-MicroCommunity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC63FF05B03C14F974842D4 /* libPods-MicroCommunity.a */; };
 		5D3298FB1A47C3C90043AF1D /* ContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */; };
 		5D3299121A47FE580043AF1D /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299111A47FE580043AF1D /* GCPlaceholderTextView.m */; };
-		5D3299161A4801090043AF1D /* UIViewController+TopBarMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299151A4801090043AF1D /* UIViewController+TopBarMessage.m */; };
+		5D32991A1A4801A00043AF1D /* InfoEntityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299191A4801A00043AF1D /* InfoEntityModel.m */; };
+		5D32991D1A4801B70043AF1D /* ACDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32991C1A4801B70043AF1D /* ACDBManager.m */; };
+		5D3299221A4801F80043AF1D /* UIViewController+TopBarMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299211A4801F80043AF1D /* UIViewController+TopBarMessage.m */; };
+		5D3299271A4802200043AF1D /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299241A4802200043AF1D /* NSString+Addition.m */; };
+		5D3299281A4802200043AF1D /* NSString+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299261A4802200043AF1D /* NSString+Color.m */; };
+		5D32992B1A48022D0043AF1D /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32992A1A48022D0043AF1D /* UIColor+Addition.m */; };
+		5D32992E1A4802DB0043AF1D /* EntityCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32992D1A4802DB0043AF1D /* EntityCategoryModel.m */; };
+		5D3299331A480EA90043AF1D /* EditCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299321A480EA90043AF1D /* EditCategoryTableViewController.m */; };
+		5D32993B1A4816D00043AF1D /* AnyCheckDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5D32993A1A4816D00043AF1D /* AnyCheckDB.sqlite */; };
+		5D3299401A4818160043AF1D /* ACDataBaseUpGrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32993E1A4818160043AF1D /* ACDataBaseUpGrade.m */; };
+		5D3299411A4818160043AF1D /* DataBaseUpGradeRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D32993F1A4818160043AF1D /* DataBaseUpGradeRecord.plist */; };
+		5D3299451A481E880043AF1D /* EditEntityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299441A481E880043AF1D /* EditEntityViewController.m */; };
 		5D7554311A456B1C00CF80DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554301A456B1C00CF80DB /* main.m */; };
 		5D7554341A456B1C00CF80DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554331A456B1C00CF80DB /* AppDelegate.m */; };
 		5D7554371A456B1C00CF80DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554361A456B1C00CF80DB /* ViewController.m */; };
@@ -36,8 +47,28 @@
 		5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewCell.m; sourceTree = "<group>"; };
 		5D3299101A47FE580043AF1D /* GCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPlaceholderTextView.h; sourceTree = "<group>"; };
 		5D3299111A47FE580043AF1D /* GCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPlaceholderTextView.m; sourceTree = "<group>"; };
-		5D3299141A4801090043AF1D /* UIViewController+TopBarMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TopBarMessage.h"; sourceTree = "<group>"; };
-		5D3299151A4801090043AF1D /* UIViewController+TopBarMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TopBarMessage.m"; sourceTree = "<group>"; };
+		5D3299181A4801A00043AF1D /* InfoEntityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoEntityModel.h; sourceTree = "<group>"; };
+		5D3299191A4801A00043AF1D /* InfoEntityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoEntityModel.m; sourceTree = "<group>"; };
+		5D32991B1A4801B70043AF1D /* ACDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDBManager.h; sourceTree = "<group>"; };
+		5D32991C1A4801B70043AF1D /* ACDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDBManager.m; sourceTree = "<group>"; };
+		5D3299201A4801F80043AF1D /* UIViewController+TopBarMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TopBarMessage.h"; sourceTree = "<group>"; };
+		5D3299211A4801F80043AF1D /* UIViewController+TopBarMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TopBarMessage.m"; sourceTree = "<group>"; };
+		5D3299231A4802200043AF1D /* NSString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Addition.h"; sourceTree = "<group>"; };
+		5D3299241A4802200043AF1D /* NSString+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Addition.m"; sourceTree = "<group>"; };
+		5D3299251A4802200043AF1D /* NSString+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Color.h"; sourceTree = "<group>"; };
+		5D3299261A4802200043AF1D /* NSString+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Color.m"; sourceTree = "<group>"; };
+		5D3299291A48022D0043AF1D /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
+		5D32992A1A48022D0043AF1D /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
+		5D32992C1A4802DB0043AF1D /* EntityCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityCategoryModel.h; sourceTree = "<group>"; };
+		5D32992D1A4802DB0043AF1D /* EntityCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityCategoryModel.m; sourceTree = "<group>"; };
+		5D3299311A480EA90043AF1D /* EditCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCategoryTableViewController.h; sourceTree = "<group>"; };
+		5D3299321A480EA90043AF1D /* EditCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCategoryTableViewController.m; sourceTree = "<group>"; };
+		5D32993A1A4816D00043AF1D /* AnyCheckDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = AnyCheckDB.sqlite; sourceTree = "<group>"; };
+		5D32993D1A4818160043AF1D /* ACDataBaseUpGrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDataBaseUpGrade.h; sourceTree = "<group>"; };
+		5D32993E1A4818160043AF1D /* ACDataBaseUpGrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDataBaseUpGrade.m; sourceTree = "<group>"; };
+		5D32993F1A4818160043AF1D /* DataBaseUpGradeRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataBaseUpGradeRecord.plist; sourceTree = "<group>"; };
+		5D3299431A481E880043AF1D /* EditEntityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditEntityViewController.h; sourceTree = "<group>"; };
+		5D3299441A481E880043AF1D /* EditEntityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditEntityViewController.m; sourceTree = "<group>"; };
 		5D75542B1A456B1C00CF80DB /* MicroCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D75542F1A456B1C00CF80DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D7554301A456B1C00CF80DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,13 +114,69 @@
 			path = GCPlaceholderTextView;
 			sourceTree = "<group>";
 		};
-		5D3299131A4801090043AF1D /* TopBarMsg+UIViewController */ = {
+		5D3299171A48015F0043AF1D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5D3299141A4801090043AF1D /* UIViewController+TopBarMessage.h */,
-				5D3299151A4801090043AF1D /* UIViewController+TopBarMessage.m */,
+				5D32993C1A4818160043AF1D /* DBUpgrade */,
+				5D32991B1A4801B70043AF1D /* ACDBManager.h */,
+				5D32991C1A4801B70043AF1D /* ACDBManager.m */,
+				5D3299181A4801A00043AF1D /* InfoEntityModel.h */,
+				5D3299191A4801A00043AF1D /* InfoEntityModel.m */,
+				5D32992C1A4802DB0043AF1D /* EntityCategoryModel.h */,
+				5D32992D1A4802DB0043AF1D /* EntityCategoryModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D32991E1A4801EA0043AF1D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5D3299291A48022D0043AF1D /* UIColor+Addition.h */,
+				5D32992A1A48022D0043AF1D /* UIColor+Addition.m */,
+				5D3299231A4802200043AF1D /* NSString+Addition.h */,
+				5D3299241A4802200043AF1D /* NSString+Addition.m */,
+				5D3299251A4802200043AF1D /* NSString+Color.h */,
+				5D3299261A4802200043AF1D /* NSString+Color.m */,
+				5D32991F1A4801F80043AF1D /* TopBarMsg+UIViewController */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		5D32991F1A4801F80043AF1D /* TopBarMsg+UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D3299201A4801F80043AF1D /* UIViewController+TopBarMessage.h */,
+				5D3299211A4801F80043AF1D /* UIViewController+TopBarMessage.m */,
 			);
 			path = "TopBarMsg+UIViewController";
+			sourceTree = "<group>";
+		};
+		5D3299371A480EEE0043AF1D /* EditCategory */ = {
+			isa = PBXGroup;
+			children = (
+				5D3299311A480EA90043AF1D /* EditCategoryTableViewController.h */,
+				5D3299321A480EA90043AF1D /* EditCategoryTableViewController.m */,
+			);
+			name = EditCategory;
+			sourceTree = "<group>";
+		};
+		5D32993C1A4818160043AF1D /* DBUpgrade */ = {
+			isa = PBXGroup;
+			children = (
+				5D32993D1A4818160043AF1D /* ACDataBaseUpGrade.h */,
+				5D32993E1A4818160043AF1D /* ACDataBaseUpGrade.m */,
+				5D32993F1A4818160043AF1D /* DataBaseUpGradeRecord.plist */,
+			);
+			path = DBUpgrade;
+			sourceTree = "<group>";
+		};
+		5D3299421A481E1F0043AF1D /* EditEntity */ = {
+			isa = PBXGroup;
+			children = (
+				5D3299431A481E880043AF1D /* EditEntityViewController.h */,
+				5D3299441A481E880043AF1D /* EditEntityViewController.m */,
+			);
+			path = EditEntity;
 			sourceTree = "<group>";
 		};
 		5D7554221A456B1C00CF80DB = {
@@ -115,7 +202,8 @@
 		5D75542D1A456B1C00CF80DB /* MicroCommunity */ = {
 			isa = PBXGroup;
 			children = (
-				5D3299131A4801090043AF1D /* TopBarMsg+UIViewController */,
+				5D32991E1A4801EA0043AF1D /* Categories */,
+				5D3299171A48015F0043AF1D /* Model */,
 				5D32990F1A47FE580043AF1D /* GCPlaceholderTextView */,
 				5D7554321A456B1C00CF80DB /* AppDelegate.h */,
 				5D7554331A456B1C00CF80DB /* AppDelegate.m */,
@@ -123,9 +211,12 @@
 				5D7554361A456B1C00CF80DB /* ViewController.m */,
 				5D3298F91A47C3C90043AF1D /* ContentTableViewCell.h */,
 				5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */,
+				5D3299371A480EEE0043AF1D /* EditCategory */,
 				5D7554381A456B1C00CF80DB /* Main.storyboard */,
+				5D3299421A481E1F0043AF1D /* EditEntity */,
 				5D75543B1A456B1C00CF80DB /* Images.xcassets */,
 				5D75543D1A456B1C00CF80DB /* LaunchScreen.xib */,
+				5D32993A1A4816D00043AF1D /* AnyCheckDB.sqlite */,
 				5D75542E1A456B1C00CF80DB /* Supporting Files */,
 			);
 			path = MicroCommunity;
@@ -257,8 +348,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D75543A1A456B1C00CF80DB /* Main.storyboard in Resources */,
+				5D32993B1A4816D00043AF1D /* AnyCheckDB.sqlite in Resources */,
 				5D75543F1A456B1C00CF80DB /* LaunchScreen.xib in Resources */,
 				5D75543C1A456B1C00CF80DB /* Images.xcassets in Resources */,
+				5D3299411A4818160043AF1D /* DataBaseUpGradeRecord.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,12 +402,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D32992E1A4802DB0043AF1D /* EntityCategoryModel.m in Sources */,
+				5D32991A1A4801A00043AF1D /* InfoEntityModel.m in Sources */,
+				5D3299271A4802200043AF1D /* NSString+Addition.m in Sources */,
+				5D3299221A4801F80043AF1D /* UIViewController+TopBarMessage.m in Sources */,
 				5D7554371A456B1C00CF80DB /* ViewController.m in Sources */,
 				5D7554341A456B1C00CF80DB /* AppDelegate.m in Sources */,
 				5D3299121A47FE580043AF1D /* GCPlaceholderTextView.m in Sources */,
+				5D3299451A481E880043AF1D /* EditEntityViewController.m in Sources */,
 				5D7554311A456B1C00CF80DB /* main.m in Sources */,
-				5D3299161A4801090043AF1D /* UIViewController+TopBarMessage.m in Sources */,
+				5D3299281A4802200043AF1D /* NSString+Color.m in Sources */,
+				5D3299331A480EA90043AF1D /* EditCategoryTableViewController.m in Sources */,
+				5D32992B1A48022D0043AF1D /* UIColor+Addition.m in Sources */,
+				5D32991D1A4801B70043AF1D /* ACDBManager.m in Sources */,
 				5D3298FB1A47C3C90043AF1D /* ContentTableViewCell.m in Sources */,
+				5D3299401A4818160043AF1D /* ACDataBaseUpGrade.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>010000</key>
+	<array>
+		<string>CREATE TABLE &quot;T_Category&quot; (categoryName varchar,categoryId varchar PRIMARY KEY, isEditable boolean);</string>
+	</array>
+	<key>010020</key>
+	<array>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable ) VALUES ( &apos;减肥&apos;,&apos;7515.231411&apos;,&apos;0&apos; );</string>
+	</array>
+	<key>010030</key>
+	<array>
+		<string>CREATE TABLE &quot;T_Entity&quot; (contentId varchar PRIMARY KEY,contentText text,copiedTimes varchar,lastestCopyTimeStamp varchar,addedTimeStamp varchar,categoryId varchar);</string>
+	</array>
+</dict>
+</plist>
