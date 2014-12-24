@@ -10,6 +10,7 @@
 #import "ContentTableViewCell.h"
 #import "EditEntityViewController.h"
 #import "InfoEntityModel.h"
+#import "EntityCategoryModel.h"
 
 @interface ViewController () <SWTableViewCellDelegate>
 {
@@ -52,6 +53,42 @@
 //    self.tableView.rowHeight = 136;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
+    
+//    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"txt"];
+//    NSError *error = nil;
+//    NSString *text = [NSString stringWithContentsOfFile:textPath encoding:NSUTF8StringEncoding error:&error];
+//    NSArray *texts = [text componentsSeparatedByString:@"\n"];
+//    
+//    NSLog(@"texts = %@",texts);
+//    
+//    EntityCategoryModel *model = [[EntityCategoryModel alloc] init];
+//    __weak __typeof(self)weakSelf = self;
+//    [model fetchAllCategoriesWithCompletionHandler:^(NSArray *allCategories) {
+//        __strong __typeof(weakSelf)strongSelf = weakSelf;
+//    
+//        for (NSString *text in texts) {
+//            EntityCategoryModel *randomCategory = [strongSelf randomCategoryForCategories:allCategories];
+//            InfoEntityModel *model = [[InfoEntityModel alloc] init];
+//            model.contentText = text;
+//            model.copiedTimes = @"0";
+//            model.lastestCopyTimeStamp = @"从未复制";
+//            model.categoryModel = randomCategory;
+//            model.addedTimeStamp = [strongSelf fetchRightNowTimeStringWithFormatyyyyMMddHHmmss];
+//            NSLog(@"ID = %@",model.contentId);
+//            if (![model insertIntoDatabase]) {
+//                NSLog(@"texts =保存不成功！");
+//            } else {
+//                sleep(1);
+//            }
+//        }
+//    }];
+}
+
+- (EntityCategoryModel *)randomCategoryForCategories:(NSArray *)all
+{
+    NSInteger from = 0,to = all.count - 1;
+    NSInteger target = arc4random() % (to - from + 1) + from;//target包括to和from
+    return all[target];
 }
 
 - (void)viewWillAppear:(BOOL)animated

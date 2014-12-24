@@ -91,12 +91,12 @@
                             <mask key="constraints">
                                 <exclude reference="on9-H1-TQT"/>
                                 <exclude reference="xio-wg-Woa"/>
+                                <exclude reference="e7y-w6-cFl"/>
+                                <exclude reference="qWc-Og-Gca"/>
                                 <exclude reference="3qn-h9-Cd5"/>
                                 <exclude reference="Gta-1u-wcI"/>
                                 <exclude reference="M09-VD-O7b"/>
                                 <exclude reference="OJ3-7J-rX1"/>
-                                <exclude reference="e7y-w6-cFl"/>
-                                <exclude reference="qWc-Og-Gca"/>
                                 <exclude reference="FDp-Th-9sY"/>
                                 <exclude reference="ZT5-Bf-kiN"/>
                                 <exclude reference="eF3-uY-2VE"/>
@@ -112,12 +112,12 @@
                             <mask key="constraints">
                                 <include reference="on9-H1-TQT"/>
                                 <include reference="xio-wg-Woa"/>
+                                <include reference="e7y-w6-cFl"/>
+                                <include reference="qWc-Og-Gca"/>
                                 <include reference="3qn-h9-Cd5"/>
                                 <include reference="Gta-1u-wcI"/>
                                 <include reference="M09-VD-O7b"/>
                                 <include reference="OJ3-7J-rX1"/>
-                                <include reference="e7y-w6-cFl"/>
-                                <include reference="qWc-Og-Gca"/>
                                 <include reference="FDp-Th-9sY"/>
                                 <include reference="ZT5-Bf-kiN"/>
                                 <include reference="eF3-uY-2VE"/>
@@ -180,6 +180,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mn6-Wy-eFC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7lr-oX-Yaz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入类别" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3c-1A-ZL1">
@@ -297,6 +298,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="微社区微社区微社区微" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD1-Xt-XwD">
                                             <rect key="frame" x="8" y="28" width="584" height="40"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" constant="384" id="0sD-1G-sS7"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="44t-gy-c3u">
                                                     <variation key="heightClass=regular-widthClass=compact" constant="20"/>
                                                 </constraint>
@@ -306,16 +308,18 @@
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="0sD-1G-sS7"/>
                                                     <exclude reference="44t-gy-c3u"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="constraints">
+                                                    <include reference="0sD-1G-sS7"/>
                                                     <include reference="44t-gy-c3u"/>
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptt-Wd-UMw" userLabel="secondView">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ptt-Wd-UMw" userLabel="secondView">
                                             <rect key="frame" x="-12" y="38" width="424" height="93"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj4-du-ILY">
@@ -499,7 +503,7 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="减肥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qO-Hy-mbO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="减肥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qO-Hy-mbO">
                                                     <rect key="frame" x="344" y="20" width="60" height="20"/>
                                                     <color key="backgroundColor" red="0.1450980392" green="0.25490196079999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>

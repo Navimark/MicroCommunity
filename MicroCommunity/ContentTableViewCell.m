@@ -33,7 +33,7 @@
         self.copTimesLabel.text = _infoModel.copiedTimes;
         self.lastestCopyTimeStampLabel.text = _infoModel.lastestCopyTimeStamp;
         self.categoryLabel.text = _infoModel.categoryModel.categoryName;
-        NSLog(@"_infoModel.categoryModel.categoryBackHEXColor = %@",_infoModel.categoryModel.categoryBackHEXColor);
+//        NSLog(@"_infoModel.categoryModel.categoryBackHEXColor = %@",_infoModel.categoryModel.categoryBackHEXColor);
         self.categoryLabel.backgroundColor = [_infoModel.categoryModel.categoryBackHEXColor RGBStringToColor];
     }
 }

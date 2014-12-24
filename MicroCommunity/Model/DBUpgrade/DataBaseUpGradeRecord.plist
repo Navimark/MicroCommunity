@@ -6,17 +6,23 @@
 	<array>
 		<string>CREATE TABLE &quot;T_Category&quot; (categoryName varchar,categoryId varchar PRIMARY KEY, isEditable boolean);</string>
 	</array>
-	<key>010030</key>
+	<key>010001</key>
 	<array>
 		<string>CREATE TABLE &quot;T_Entity&quot; (contentId varchar PRIMARY KEY,contentText text,copiedTimes varchar,lastestCopyTimeStamp varchar,addedTimeStamp varchar,categoryId varchar);</string>
 	</array>
-	<key>010033</key>
-	<array>
-		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;默认类别&apos;,&apos;167091.3772749001&apos;,&apos;0&apos;,&apos;#0.6000.4000.200&apos; );</string>
-	</array>
-	<key>010001</key>
+	<key>010002</key>
 	<array>
 		<string>ALTER TABLE T_Category ADD categoryBackHEXColor varchar;</string>
+	</array>
+	<key>010003</key>
+	<array>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;默认类别&apos;,&apos;167091.3772749001&apos;,&apos;0&apos;,&apos;#0.6000.4000.200&apos; );</string>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;运动&apos;,&apos;188404.8591449857&apos;,&apos;0&apos;,&apos;#0.3320.7270.625&apos; );</string>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;饮食&apos;,&apos;188411.7599779963&apos;,&apos;0&apos;,&apos;#0.1840.6170.094&apos; );</string>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;减肥&apos;,&apos;188419.3780500293&apos;,&apos;0&apos;,&apos;#0.5470.8010.357&apos; );</string>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;增肥&apos;,&apos;188428.1613240242&apos;,&apos;0&apos;,&apos;#0.6450.5860.106&apos; );</string>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;跑步&apos;,&apos;188442.7625989914&apos;,&apos;0&apos;,&apos;#0.5250.0380.746&apos; );</string>
+		<string>INSERT INTO &quot;T_Category&quot; ( categoryName,categoryId,isEditable,categoryBackHEXColor ) VALUES ( &apos;社会&apos;,&apos;189708.1911619902&apos;,&apos;1&apos;,&apos;#0.9880.6790.282&apos; );</string>
 	</array>
 </dict>
 </plist>
