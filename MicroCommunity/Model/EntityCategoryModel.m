@@ -9,6 +9,7 @@
 #import "EntityCategoryModel.h"
 #import "ACDBManager.h"
 #import "UIColor+Addition.h"
+#import "NSString+Color.h"
 
 @interface EntityCategoryModel ()
 
@@ -59,6 +60,14 @@
 + (NSString *)tableName
 {
     return @"T_Category";
+}
+
+- (void)setCategoryBackHEXColor:(NSString *)categoryBackHEXColor
+{
+    if (_categoryBackHEXColor != categoryBackHEXColor) {
+        _categoryBackHEXColor = categoryBackHEXColor;
+        self.rgbColor = [categoryBackHEXColor RGBStringToColor];
+    }
 }
 
 - (NSDictionary *)convertToDictionary

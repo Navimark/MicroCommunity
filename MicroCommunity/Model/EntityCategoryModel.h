@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface EntityCategoryModel : NSObject
 
@@ -14,6 +15,7 @@
 @property (nonatomic , copy) NSString *categoryId;
 @property (nonatomic , assign) BOOL isEditable;
 @property (nonatomic , copy) NSString *categoryBackHEXColor;//16进制的颜色字符串
+@property (nonatomic , strong) UIColor *rgbColor;
 
 @property (nonatomic , strong) NSArray *allCategoryModels;
 @property (nonatomic , strong) NSArray *allEditableCategoryModels;

@@ -7,7 +7,6 @@
 //
 
 #import "ContentTableViewCell.h"
-#import "NSString+Color.h"
 
 @interface ContentTableViewCell ()
 
@@ -34,7 +33,7 @@
         self.lastestCopyTimeStampLabel.text = _infoModel.lastestCopyTimeStamp;
         self.categoryLabel.text = _infoModel.categoryModel.categoryName;
 //        NSLog(@"_infoModel.categoryModel.categoryBackHEXColor = %@",_infoModel.categoryModel.categoryBackHEXColor);
-        self.categoryLabel.backgroundColor = [_infoModel.categoryModel.categoryBackHEXColor RGBStringToColor];
+        self.categoryLabel.backgroundColor = _infoModel.categoryModel.rgbColor;
     }
 }
 
