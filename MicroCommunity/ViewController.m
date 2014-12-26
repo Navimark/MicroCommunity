@@ -11,6 +11,7 @@
 #import "EditEntityViewController.h"
 #import "InfoEntityModel.h"
 #import "EntityCategoryModel.h"
+#import "UIViewController+TopBarMessage.h"
 
 @interface ViewController () <SWTableViewCellDelegate>
 {
@@ -53,35 +54,40 @@
 //    self.tableView.rowHeight = 136;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
+    /*
+    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"txt"];
+    NSError *error = nil;
+    NSString *text = [NSString stringWithContentsOfFile:textPath encoding:NSUTF8StringEncoding error:&error];
+    NSArray *texts = [text componentsSeparatedByString:@"\n"];
     
-//    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"txt"];
-//    NSError *error = nil;
-//    NSString *text = [NSString stringWithContentsOfFile:textPath encoding:NSUTF8StringEncoding error:&error];
-//    NSArray *texts = [text componentsSeparatedByString:@"\n"];
-//    
-//    NSLog(@"texts = %@",texts);
-//    
-//    EntityCategoryModel *model = [[EntityCategoryModel alloc] init];
-//    __weak __typeof(self)weakSelf = self;
-//    [model fetchAllCategoriesWithCompletionHandler:^(NSArray *allCategories) {
-//        __strong __typeof(weakSelf)strongSelf = weakSelf;
-//    
-//        for (NSString *text in texts) {
-//            EntityCategoryModel *randomCategory = [strongSelf randomCategoryForCategories:allCategories];
-//            InfoEntityModel *model = [[InfoEntityModel alloc] init];
-//            model.contentText = text;
-//            model.copiedTimes = @"0";
-//            model.lastestCopyTimeStamp = @"从未复制";
-//            model.categoryModel = randomCategory;
-//            model.addedTimeStamp = [strongSelf fetchRightNowTimeStringWithFormatyyyyMMddHHmmss];
-//            NSLog(@"ID = %@",model.contentId);
-//            if (![model insertIntoDatabase]) {
-//                NSLog(@"texts =保存不成功！");
-//            } else {
+    NSLog(@"texts = %@",texts);
+    NSDate *startDate = [[NSDate date] dateByAddingTimeInterval:-200];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    __block NSInteger i = 0;
+    EntityCategoryModel *model = [[EntityCategoryModel alloc] init];
+    __weak __typeof(self)weakSelf = self;
+    [model fetchAllCategoriesWithCompletionHandler:^(NSArray *allCategories) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+    
+        for (NSString *text in texts) {
+            ++i;
+            EntityCategoryModel *randomCategory = [strongSelf randomCategoryForCategories:allCategories];
+            InfoEntityModel *model = [[InfoEntityModel alloc] init];
+            model.contentText = text;
+            model.copiedTimes = @"0";
+            model.lastestCopyTimeStamp = @"从未复制";
+            model.categoryModel = randomCategory;
+            model.addedTimeStamp = [dateFormatter stringFromDate:[startDate dateByAddingTimeInterval:i]];
+            NSLog(@"ID = %@",model.contentId);
+            if (![model insertIntoDatabase]) {
+                NSLog(@"texts =保存不成功！");
+            } else {
 //                sleep(1);
-//            }
-//        }
-//    }];
+            }
+        }
+    }];
+     */
 }
 
 - (EntityCategoryModel *)randomCategoryForCategories:(NSArray *)all
@@ -124,6 +130,7 @@
     if (![copiedModel updateInDatabase]) {
         NSLog(@"复制后更新失败");
     } else {
+        NSLog(@"更新tableview");
         [self reloadDataSourceAndReloadTableView:YES];
     }
 }
@@ -153,13 +160,16 @@
 
     __weak __typeof(self)weakSelf = self;
     cell.copyButtonAction = ^(){
-        //复制按钮动作
-        UIPasteboard *pp = [UIPasteboard generalPasteboard];
-        pp.string = tempModel.contentText;
-        NSLog(@"一复制");
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        [strongSelf copyActionForModel:tempModel];
-        
+        [self.parentViewController showTopMessage:@"已经复制到粘贴板上！" ];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(){
+            UIPasteboard *pp = [UIPasteboard generalPasteboard];
+            pp.string = tempModel.contentText;
+            NSLog(@"一复制");
+            
+            //复制按钮动作
+            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            [strongSelf copyActionForModel:tempModel];
+        });
     };
     return cell;
 }
