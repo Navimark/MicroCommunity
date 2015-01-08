@@ -54,14 +54,15 @@
 //    self.tableView.rowHeight = 136;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
+    
     /*
-    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"txt"];
+    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"Data1" ofType:@"txt"];
     NSError *error = nil;
     NSString *text = [NSString stringWithContentsOfFile:textPath encoding:NSUTF8StringEncoding error:&error];
     NSArray *texts = [text componentsSeparatedByString:@"\n"];
     
     NSLog(@"texts = %@",texts);
-    NSDate *startDate = [[NSDate date] dateByAddingTimeInterval:-200];
+    NSDate *startDate = [[NSDate date] dateByAddingTimeInterval:-500];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     __block NSInteger i = 0;

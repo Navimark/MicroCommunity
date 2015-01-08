@@ -31,6 +31,7 @@
 		5D75544B1A456B1C00CF80DB /* MicroCommunityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D75544A1A456B1C00CF80DB /* MicroCommunityTests.m */; };
 		5D9BE0201A4A541F009799B5 /* Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BE01F1A4A541F009799B5 /* Data.txt */; };
 		5D9C71131A4906AB00A7A939 /* AddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9C71121A4906AB00A7A939 /* AddCategoryViewController.m */; };
+		5DEE2ACE1A5A99CF00676E3F /* Data1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5DEE2ACD1A5A99CF00676E3F /* Data1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		5D9BE01F1A4A541F009799B5 /* Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data.txt; sourceTree = "<group>"; };
 		5D9C71111A4906AB00A7A939 /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
 		5D9C71121A4906AB00A7A939 /* AddCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCategoryViewController.m; sourceTree = "<group>"; };
+		5DEE2ACD1A5A99CF00676E3F /* Data1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data1.txt; sourceTree = "<group>"; };
 		CAC63FF05B03C14F974842D4 /* libPods-MicroCommunity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MicroCommunity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57543203E90655629ACE4DC /* Pods-MicroCommunity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroCommunity.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroCommunity/Pods-MicroCommunity.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 				5D7554351A456B1C00CF80DB /* ViewController.h */,
 				5D7554361A456B1C00CF80DB /* ViewController.m */,
 				5D9BE01F1A4A541F009799B5 /* Data.txt */,
+				5DEE2ACD1A5A99CF00676E3F /* Data1.txt */,
 				5D3298F91A47C3C90043AF1D /* ContentTableViewCell.h */,
 				5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */,
 				5D3299371A480EEE0043AF1D /* EditCategory */,
@@ -359,6 +362,7 @@
 				5D32993B1A4816D00043AF1D /* AnyCheckDB.sqlite in Resources */,
 				5D9BE0201A4A541F009799B5 /* Data.txt in Resources */,
 				5D75543F1A456B1C00CF80DB /* LaunchScreen.xib in Resources */,
+				5DEE2ACE1A5A99CF00676E3F /* Data1.txt in Resources */,
 				5D75543C1A456B1C00CF80DB /* Images.xcassets in Resources */,
 				5D3299411A4818160043AF1D /* DataBaseUpGradeRecord.plist in Resources */,
 			);
