@@ -8,7 +8,7 @@
 	</array>
 	<key>010001</key>
 	<array>
-		<string>CREATE TABLE &quot;T_Entity&quot; (contentId varchar PRIMARY KEY,contentText text,copiedTimes varchar,lastestCopyTimeStamp varchar,addedTimeStamp varchar,categoryId varchar);</string>
+		<string>CREATE TABLE &quot;T_Entity&quot; (contentId varchar PRIMARY KEY,contentText text,copiedTimes integer,lastestCopyTimeStamp varchar,addedTimeStamp varchar,categoryId varchar);</string>
 	</array>
 	<key>010002</key>
 	<array>

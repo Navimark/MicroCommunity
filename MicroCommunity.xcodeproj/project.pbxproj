@@ -22,6 +22,7 @@
 		5D3299401A4818160043AF1D /* ACDataBaseUpGrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32993E1A4818160043AF1D /* ACDataBaseUpGrade.m */; };
 		5D3299411A4818160043AF1D /* DataBaseUpGradeRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D32993F1A4818160043AF1D /* DataBaseUpGradeRecord.plist */; };
 		5D3299451A481E880043AF1D /* EditEntityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3299441A481E880043AF1D /* EditEntityViewController.m */; };
+		5D4B24F11A67B661009D9FDE /* Data2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B24F01A67B661009D9FDE /* Data2.txt */; };
 		5D7554311A456B1C00CF80DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554301A456B1C00CF80DB /* main.m */; };
 		5D7554341A456B1C00CF80DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554331A456B1C00CF80DB /* AppDelegate.m */; };
 		5D7554371A456B1C00CF80DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7554361A456B1C00CF80DB /* ViewController.m */; };
@@ -72,6 +73,7 @@
 		5D32993F1A4818160043AF1D /* DataBaseUpGradeRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataBaseUpGradeRecord.plist; sourceTree = "<group>"; };
 		5D3299431A481E880043AF1D /* EditEntityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditEntityViewController.h; sourceTree = "<group>"; };
 		5D3299441A481E880043AF1D /* EditEntityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditEntityViewController.m; sourceTree = "<group>"; };
+		5D4B24F01A67B661009D9FDE /* Data2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data2.txt; sourceTree = "<group>"; };
 		5D75542B1A456B1C00CF80DB /* MicroCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D75542F1A456B1C00CF80DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D7554301A456B1C00CF80DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				5D7554361A456B1C00CF80DB /* ViewController.m */,
 				5D9BE01F1A4A541F009799B5 /* Data.txt */,
 				5DEE2ACD1A5A99CF00676E3F /* Data1.txt */,
+				5D4B24F01A67B661009D9FDE /* Data2.txt */,
 				5D3298F91A47C3C90043AF1D /* ContentTableViewCell.h */,
 				5D3298FA1A47C3C90043AF1D /* ContentTableViewCell.m */,
 				5D3299371A480EEE0043AF1D /* EditCategory */,
@@ -361,6 +364,7 @@
 				5D75543A1A456B1C00CF80DB /* Main.storyboard in Resources */,
 				5D32993B1A4816D00043AF1D /* AnyCheckDB.sqlite in Resources */,
 				5D9BE0201A4A541F009799B5 /* Data.txt in Resources */,
+				5D4B24F11A67B661009D9FDE /* Data2.txt in Resources */,
 				5D75543F1A456B1C00CF80DB /* LaunchScreen.xib in Resources */,
 				5DEE2ACE1A5A99CF00676E3F /* Data1.txt in Resources */,
 				5D75543C1A456B1C00CF80DB /* Images.xcassets in Resources */,

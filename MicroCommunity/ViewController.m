@@ -12,6 +12,7 @@
 #import "InfoEntityModel.h"
 #import "EntityCategoryModel.h"
 #import "UIViewController+TopBarMessage.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController () <SWTableViewCellDelegate>
 {
@@ -54,9 +55,8 @@
 //    self.tableView.rowHeight = 136;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
-    
     /*
-    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"Data1" ofType:@"txt"];
+    NSString *textPath = [[NSBundle mainBundle] pathForResource:@"Data2" ofType:@"txt"];
     NSError *error = nil;
     NSString *text = [NSString stringWithContentsOfFile:textPath encoding:NSUTF8StringEncoding error:&error];
     NSArray *texts = [text componentsSeparatedByString:@"\n"];
@@ -98,11 +98,40 @@
     return all[target];
 }
 
+- (NSString *)randomCopyTimesForEntities
+{
+    NSInteger from = 1,to = self.listControlModel.allInfoEntityModels.count;
+    NSInteger target = arc4random() % (to - from + 1) + from;//target包括to和from
+    return [NSString stringWithFormat:@"%@",@(target)];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(){
     [self reloadDataSourceAndReloadTableView:YES];
+//    });
+    
 }
+
+- (IBAction)randomBarButtonAction:(UIBarButtonItem *)sender
+{
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    dispatch_async(dispatch_get_main_queue(), ^(){
+        NSLog(@"开始随机打乱");
+        for (InfoEntityModel *tempModel in self.listControlModel.allInfoEntityModels) {
+            tempModel.copiedTimes = [self randomCopyTimesForEntities];
+            NSLog(@"新的复制cishu :%@",tempModel.copiedTimes);
+            if (![tempModel updateInDatabase]) {
+                NSLog(@"更新失败 - 打乱失败:%@",tempModel);
+            }
+        }
+        [self reloadDataSourceAndReloadTableView:YES];
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+        NSLog(@"Job's done");
+    });
+}
+
 
 - (void)reloadDataSourceAndReloadTableView:(BOOL)shouldReload
 {

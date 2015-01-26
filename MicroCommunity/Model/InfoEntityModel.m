@@ -61,6 +61,12 @@
     return [[self convertToDictionary] description];
 }
 
+- (void)setValuesForKeysWithDictionary:(NSDictionary *)keyedValues
+{
+    [super setValuesForKeysWithDictionary:keyedValues];
+    self.copiedTimes = [NSString stringWithFormat:@"%@",self.copiedTimes];
+}
+
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
     EntityCategoryModel *categoryModel = [EntityCategoryModel fetchOneCategoryWithCategoryId:value];
@@ -72,7 +78,7 @@
 
 - (void)fetchAllEntitiesForAppFirstLoadingWithCompletionHandler:(void (^)(NSArray *))completionHandler
 {
-    NSString *condition = [NSString stringWithFormat:@"order by copiedTimes asc,addedTimeStamp desc"];
+    NSString *condition = [NSString stringWithFormat:@"order by copiedTimes asc,addedTimeStamp asc"];
     NSArray *attributes = [[ACDBManager sharedInstance] queryTable:[self tableName] withSQLCondition:condition];
     NSMutableArray *tempArray = [@[] mutableCopy];
     for (NSDictionary *dict in attributes) {
